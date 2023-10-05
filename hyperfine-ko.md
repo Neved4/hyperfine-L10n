@@ -1,8 +1,9 @@
 # hyperfine
 [![CICD](https://github.com/sharkdp/hyperfine/actions/workflows/CICD.yml/badge.svg)](https://github.com/sharkdp/hyperfine/actions/workflows/CICD.yml)
 [![버전 정보](https://img.shields.io/crates/v/hyperfine.svg)](https://crates.io/crates/hyperfine)
-[중文](https://github.com/chinanf-boy/hyperfine-zh)
-[한국어](https://github.com/Neved4/hyperfine-L10n/blob/main/hyperfine-ko.md)
+[中文](https://github.com/chinanf-boy/hyperfine-zh) |
+[한국어](https://github.com/Neved4/hyperfine-L10n/blob/main/hyperfine-ko.md) |
+[Русский](https://github.com/Neved4/hyperfine-L10n/blob/main/hyperfine-ru.md)
 
 커맨드 라인 벤치마킹 도구.
 
@@ -146,7 +147,7 @@ Hyperfine은 CSV, JSON, Markdown 및 기타 형식으로 벤치마크 결과를 
 JSON 출력은 벤치마크 결과를 더 자세히 분석하려는 경우 유용합니다.
 [`scripts/`](https://github.com/sharkdp/hyperfine/tree/master/scripts) 폴더에는 벤치마크 결과를 더 자세히 분석하고 도움이 되는 시각화를 생성하는 데 도움이 되는 다양한 파이썬 프로그램이 많이 포함되어 있습니다. 예를 들어 런타임의 히스토그램이나 여러 벤치마크를 비교하기 위한 Whisker Plot과 같은 것입니다:
 
-| ![](doc/histogram.png) | ![](doc/whisker.png) |
+| ![](https://github.com/sharkdp/hyperfine/blob/master/doc/histogram.png) | ![](https://github.com/sharkdp/hyperfine/blob/master/doc/whisker.png) |
 | ---------------------: | -------------------: |
 
 
@@ -155,7 +156,7 @@ JSON 출력은 벤치마크 결과를 더 자세히 분석하려는 경우 유�
 다음 차트는 `--warmup`, `--prepare <cmd>`, `--setup <cmd>` 또는 `--cleanup <cmd>`와
 같은 옵션을 사용할 때 다양한 타이밍 실행의 실행 순서를 설명합니다:
 
-![](doc/execution-order.png)
+![](https://github.com/sharkdp/hyperfine/blob/master/doc/execution-order.png)
 
 ## 설치
 
@@ -163,7 +164,7 @@ JSON 출력은 벤치마크 결과를 더 자세히 분석하려는 경우 유�
 
 ### Ubuntu
 
-릴리스 페이지에서 해당하는 .deb 패키지를 다운로드하고 dpkg를 사용하여 설치할 수 있습니다:
+릴리스 페이지에서 해당하는 `.deb` 패키지를 다운로드하고 `dpkg`를 사용하여 설치할 수 있습니다:
 ```sh
 wget https://github.com/sharkdp/hyperfine/releases/download/v1.16.1/hyperfine_1.16.1_amd64.deb
 sudo dpkg -i hyperfine_1.16.1_amd64.deb
@@ -214,7 +215,7 @@ nix-env -i hyperfine
 
 ### Void Linux
 
-Hyperfine은 xbps를 통해 설치할 수 있습니다:
+Hyperfine은 `xbps`를 통해 설치할 수 있습니다:
 
 ```sh
 xbps-install -S hyperfine
@@ -310,4 +311,4 @@ hyperfine을 올바르게 인용하는 방법에 대한 정보는 사이드바�
 
 hyperfine은 MIT 라이선스와 Apache License 2.0의 조건에 따라 이중 라이선스가 부여됩니다.
 
-세부 정보는 [LICENSE-APACHE][] 및 [LICENSE-MIT][] 파일을 참조하십시오.
+세부 정보는 [LICENSE-APACHE](https://github.com/sharkdp/hyperfine/blob/master/LICENSE-APACHE) 및 [LICENSE-MIT](https://github.com/sharkdp/hyperfine/blob/master/LICENSE-MIT) 파일을 참조하십시오.

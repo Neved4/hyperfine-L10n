@@ -1,8 +1,8 @@
 # hyperfine
 [![CICD](https://github.com/sharkdp/hyperfine/actions/workflows/CICD.yml/badge.svg)](https://github.com/sharkdp/hyperfine/actions/workflows/CICD.yml)
 [![Информация о версии](https://img.shields.io/crates/v/hyperfine.svg)](https://crates.io/crates/hyperfine)
-[中文](https://github.com/chinanf-boy/hyperfine-zh)
-[한국어](https://github.com/Neved4/hyperfine-L10n/blob/main/hyperfine-ko.md)
+[中文](https://github.com/chinanf-boy/hyperfine-zh) |
+[한국어](https://github.com/Neved4/hyperfine-L10n/blob/main/hyperfine-ko.md) |
 [Русский](https://github.com/Neved4/hyperfine-L10n/blob/main/hyperfine-ru.md)
 
 Инструмент для бенчмаркинга командной строки.
@@ -22,7 +22,7 @@
 - Статистическое обнаружение выбросов для выявления влияния других программ и эффектов кеширования.
 - Экспорт результатов в различные форматы: [AsciiDoc](https://asciidoc.org/), [CSV](https://datatracker.ietf.org/doc/html/rfc4180), [JSON](https://www.json.org/json-en.html), [Markdown](https://commonmark.org/), [Org Mode](https://orgmode.org/).
 - Параметризованные бенчмарки (например, изменение количества потоков).
-- Переносимость
+- Кросс-платформенный
 
 ## Использование
 
@@ -135,13 +135,13 @@ hyperfine '. /tmp/my_alias.sh; my_alias'
 Hyperfine имеет несколько опций для экспорта результатов бенчмарков в форматы CSV, JSON, Markdown и другие (см. текст справки `--help` для получения подробной информации).
 
 Markdown
-Вы можете использовать опцию --export-markdown <файл> для создания таблиц, подобных следующим:
+Вы можете использовать опцию `--export-markdown` <файл> для создания таблиц, подобных следующим:
 
-| Команда	Среднее [с]              |      Мин. [с] | Макс. [с] | Относительно |
-| :------------------------------- | ------------: | --------: | -----------: | ----------: |
-| `find . -iregex '.*[0-9]\.jpg$'` | 2.275 ± 0.046 |     2.243 |        2.397 | 9.79 ± 0.22 |
-| `find . -iname '*[0-9].jpg'`     | 1.427 ± 0.026 |     1.405 |        1.468 | 6.14 ± 0.13 |
-| `fd -HI '.*[0-9]\.jpg$'`         | 0.232 ± 0.002 |     0.230 |        0.236 |        1.00 |
+| Команда                          |   Среднее [с] | Мин. [с] | Макс. [с] | Относительно |
+| :------------------------------- | ------------: | -------: | --------: | -----------: |
+| `find . -iregex '.*[0-9]\.jpg$'` | 2.275 ± 0.046 |    2.243 |     2.397 |  9.79 ± 0.22 |
+| `find . -iname '*[0-9].jpg'`     | 1.427 ± 0.026 |    1.405 |     1.468 |  6.14 ± 0.13 |
+| `fd -HI '.*[0-9]\.jpg$'`         | 0.232 ± 0.002 |    0.230 |     0.236 |         1.00 |
 
 #### JSON
 
@@ -151,7 +151,7 @@ JSON-вывод полезен, если вы хотите подробно пр
 визуализаций, таких как гистограмма времени выполнения или усовая диаграмма для сравнения
 нескольких бенчмарков:
 
-| ![](doc/histogram.png) | ![](doc/whisker.png) |
+| ![](https://github.com/sharkdp/hyperfine/blob/master/doc/histogram.png) | ![](https://github.com/sharkdp/hyperfine/blob/master/doc/whisker.png) |
 | ---------------------: | -------------------: |
 
 
@@ -160,6 +160,8 @@ JSON-вывод полезен, если вы хотите подробно пр
 В следующей схеме объясняется порядок выполнения различных временных запусков при использовании опций
 типа `--warmup`, `--prepare <cmd>`, `--setup <cmd>` или `--cleanup <cmd>`:
 
+![](https://github.com/sharkdp/hyperfine/blob/master/doc/execution-order.png)
+
 
 ## Установка
 
@@ -167,7 +169,7 @@ JSON-вывод полезен, если вы хотите подробно пр
 
 ### Ubuntu
 
-Загрузите соответствующий пакет `.deb` с страницы выпуска и установите его через dpkg:
+Загрузите соответствующий пакет `.deb` с страницы выпуска и установите его через `dpkg`:
 ```sh
 wget https://github.com/sharkdp/hyperfine/releases/download/v1.16.1/hyperfine_1.16.1_amd64.deb
 sudo dpkg -i hyperfine_1.16.1_amd64.deb
@@ -182,34 +184,34 @@ dnf install hyperfine
 
 ### Alpine Linux
 
-На Alpine Linux hyperfine можно установить из официальных репозиториев:
+На Alpine Linux hyperfine можно установить из [официальных репозиториев](https://pkgs.alpinelinux.org/packages?name=hyperfine):
 ```sh
 apk add hyperfine
 ```
 
 ### Arch Linux
 
-На Arch Linux hyperfine можно установить из официальных репозиториев:
+На Arch Linux hyperfine можно установить из [официальных репозиториев](https://www.archlinux.org/packages/community/x86_64/hyperfine/):
 ```sh
 pacman -S hyperfine
 ```
 ### Debian Linux
 
-На Debian Linux hyperfine можно установить из репозиториев тестирования:
+На Debian Linux hyperfine можно установить из [репозиториев тестирования](https://packages.debian.org/testing/main/hyperfine):
 ```sh
 apt install hyperfine
 ```
 
 ### Funtoo Linux
 
-На Funtoo Linux hyperfine можно установить из core-kit:
+На Funtoo Linux hyperfine можно установить [из core-kit](https://github.com/funtoo/core-kit/tree/1.4-release/app-benchmarks/hyperfine/):
 ```sh
 emerge app-benchmarks/hyperfine
 ```
 
 ### NixOS
 
-На NixOS hyperfine можно установить из официальных репозиториев:
+На NixOS hyperfine можно установить из [официальных репозиториев](https://nixos.org/nixos/packages.html?query=hyperfine):
 
 ```sh
 nix-env -i hyperfine
@@ -217,19 +219,19 @@ nix-env -i hyperfine
 
 ### Void Linux
 
-Hyperfine можно установить через xbps
+Hyperfine можно установить через `xbps`
 ```sh
 xbps-install -S hyperfine
 ```
 
 ### macOS
 
-Hyperfine можно установить через Homebrew:
+Hyperfine можно установить через [Homebrew](https://brew.sh):
 ```sh
 brew install hyperfine
 ```
 
-Или вы можете установить с помощью MacPorts:
+Или вы можете установить с помощью [MacPorts](https://www.macports.org):
 ```sh
 sudo port selfupdate
 sudo port install hyperfine
@@ -237,7 +239,7 @@ sudo port install hyperfine
 
 ### FreeBSD
 
-Hyperfine можно установить через pkg:
+Hyperfine можно установить через `pkg`:
 ```sh
 pkg install hyperfine
 ```
@@ -309,5 +311,4 @@ Hyperfine вдохновлен [bench](https://github.com/Gabriella439/bench).
 
 hyperfine двойной лицензии в соответствии с условиями лицензии MIT и Apache License 2.0.
 
-См. 
-[LICENSE-APACHE][] и [LICENSE-MIT][] для подробностей.
+См. [LICENSE-APACHE](https://github.com/sharkdp/hyperfine/blob/master/LICENSE-APACHE) и [LICENSE-MIT](https://github.com/sharkdp/hyperfine/blob/master/LICENSE-MIT) для подробностей.
