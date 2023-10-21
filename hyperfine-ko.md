@@ -160,7 +160,9 @@ JSON 출력은 벤치마크 결과를 더 자세히 분석하려는 경우 유�
 
 ## 설치
 
-[![패키징 상태](https://repology.org/badge/vertical-allrepos/hyperfine.svg)](https://repology.org/project/hyperfine/versions)
+<a href="https://repology.org/project/hyperfine/versions">
+    <img src="https://repology.org/badge/vertical-allrepos/hyperfine.svg" alt="패키징 상태" align="right">
+</a>
 
 ### Ubuntu
 
