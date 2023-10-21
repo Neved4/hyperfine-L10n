@@ -165,7 +165,9 @@ JSON-вывод полезен, если вы хотите подробно пр
 
 ## Установка
 
-[![Статус упаковки](https://repology.org/badge/vertical-allrepos/hyperfine.svg)](https://repology.org/project/hyperfine/versions)
+<a href="https://repology.org/project/hyperfine/versions">
+    <img src="https://repology.org/badge/vertical-allrepos/hyperfine.svg" alt="Статус упаковки" align="right">
+</a>
 
 ### Ubuntu
 
